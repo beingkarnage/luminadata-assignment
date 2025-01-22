@@ -39,8 +39,6 @@ function App(){
   return (
     
     <>
-    <script src="http://localhost:8097"></script>
-    <script src="/node_modules/fast-formula-parser/build/parser.min.js"> </script>
     <ExcelUploader/>
     </>
   )
