@@ -35,7 +35,6 @@ async def root():
 
 @app.post("/v1/upload")
 async def upload(request: Request, file: UploadFile = File(...)):
-    headers = request.headers
     ext = os.path.splitext(file.filename)[1].lower()
     if file.content_type is None and ext not in [".xls", ".xlsx"]:
         raise HTTPException(status_code=400, detail="Invalid file type. Please upload an Excel file.")
